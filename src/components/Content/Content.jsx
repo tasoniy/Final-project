@@ -10,7 +10,7 @@ import ReportOfTheftForm from "../ReportOfTheftForm/ReportOfTheftForm";
 import { Container } from "../Wrappers/Wrappers";
 
 const MainStyle = styled.main`
-  padding-bottom: 200px;
+  min-height: 60vh; 
   background: no-repeat url(${mainImage});
   background-position: top right;
   background-size: 60%;
