@@ -12,12 +12,14 @@ const FormStyle = styled.form`
 
 const CloseButton = styled.button`
   border: none;
+  align-self: flex-end;
+  text-align: center;
 `
 
 const Form = () => {
   return (
     <FormStyle>
-      <CloseButton>X</CloseButton>
+      <CloseButton>✖</CloseButton>
       <p >Field with <span style={{color: "red"}}>*</span> are required</p>
       <Input type="text" placeholder="Enter your full name"/>
       <Button type="submit" color='#524EB7'>Submit</Button>
