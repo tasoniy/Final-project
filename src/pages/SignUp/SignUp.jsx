@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import Form from "../../components/Form/Form";
 import Input from "../../components/Input/Input";
