@@ -1,5 +1,5 @@
 import React from "react";
-import { NormalizeLink } from "../Header/Header";
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import styled from "styled-components";
 import { lightGreen, white } from "../../assets/Pallete/Pallete";
@@ -22,9 +22,13 @@ const CloseButton = styled.button`
 
 const Form = (props) => {
   const {children} = props;
+
+  const submitForm = (event) => {
+    event.preventDefault();
+  }
   return (
-    <FormStyle>
-      <CloseButton><NormalizeLink to="/">✖</NormalizeLink></CloseButton>
+    <FormStyle onSubmit={submitForm}>
+      <CloseButton><Link to="/">✖</Link></CloseButton>
       <p>Required field <span style={{color: "red"}}>*</span></p>
       {children}
       <Button type="submit" color={lightGreen}>Submit</Button>

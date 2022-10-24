@@ -1,5 +1,5 @@
 import React from "react";
-import { NormalizeLink } from "../../components/Header/Header";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { lightPurple, purple } from "../../assets/Pallete/Pallete";
 import Button from "../../components/Button/Button";
@@ -23,7 +23,7 @@ const MainPage = () => {
         If your bike has been stolen, please click button below <br />
         and fill out the form or give us a call.
       </ParagraphStyle>
-      <Button><NormalizeLink to="/report">Report a theft</NormalizeLink></Button>
+      <Link to="/report"><Button>Report a theft</Button></Link>
     </>
   )
 }

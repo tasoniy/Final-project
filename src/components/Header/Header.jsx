@@ -13,10 +13,6 @@ const DisplayFlex = css`
   align-items: center;
 `
 
-export const NormalizeLink = styled(Link)`
-  text-decoration: none;
-`
-
 const Frame = css`
   background-color: #F5FAFF;
   box-shadow: 10px 20px 40px ${shadow};
@@ -53,7 +49,6 @@ const Wrap = styled.div`
 `
 
 const PhoneStyle = styled.a`
-  text-decoration: none;
   color: ${purple};
   margin-left: 5px;
   font-size: 10px;
@@ -67,9 +62,9 @@ const Header = () => {
         <CaptionLogo>Find bike</CaptionLogo>
         </Logo>
         <NavStyle>
-          <NormalizeLink to="/report">Report theft</NormalizeLink>
+          <Link to="/report">Report theft</Link>
           { //if sign up
-            <NormalizeLink to="/officers">Officers</NormalizeLink>
+            <Link to="/officers">Officers</Link>
           }
           <Wrap>
             <img src={icon} width="20" height="20" alt="telephone icon" />
@@ -79,8 +74,8 @@ const Header = () => {
           </Wrap>
         </NavStyle>
         <Wrap>
-          <NormalizeLink to="/registration"><Button color={lightGreen}>Sign Up</Button></NormalizeLink>
-          <NormalizeLink to="/login"><Button color={purple}>Sing in</Button></NormalizeLink>
+          <Link to="/registration"><Button color={lightGreen}>Sign Up</Button></Link>
+          <Link to="/login"><Button color={purple}>Sing in</Button></Link>
         </Wrap>
       </Container>  
     </HeaderStyle>
