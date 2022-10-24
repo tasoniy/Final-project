@@ -1,11 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const ContainerStyle = styled.div`
   ${props => props.display};
   box-sizing: border-box;
   width: 100%;
-  padding: 0 80px;
+  height: 100%;
+  padding: 0 8rem;
 `
 
 const Container = (props) => {
@@ -14,4 +15,4 @@ const Container = (props) => {
   )
 }
 
-export {Container};
+export default Container;

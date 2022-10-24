@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const InputStyle = styled.input`
@@ -17,14 +17,22 @@ const InputStyle = styled.input`
 
 const LabelStyle = styled.label`
   color: #2B2B37;
+  font-size: 13px;
+  margin: 5px 0;
 `
 
 const Input = (props) => {
-  const {type, placeholder} = props
+  const {type, placeholder, label, required} = props;
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = (e) => { 
+    setInputValue(e.target.value);
+    console.log(inputValue);
+  }
   return (
     <>
-      <LabelStyle>Name</LabelStyle>
-      <InputStyle type={type} placeholder={placeholder}/>
+      <LabelStyle>{label} {required ? <span style={{color: "red"}}>*</span> : ''}</LabelStyle>
+      <InputStyle onChange={handleChange} value={inputValue} type={type} required={required} placeholder={placeholder}/>
     </>
   )
 }
