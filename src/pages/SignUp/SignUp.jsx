@@ -1,10 +1,15 @@
+import axios from "axios";
 import React from "react";
 import Form from "../../components/Form/Form";
 import Input from "../../components/Input/Input";
 
 const SignUp = () => {
+  const sendRequest = () => {
+    console.log('send');
+  }
+
   return (
-    <Form>
+    <Form submit={sendRequest}>
       <Input type="email" label="Email" required placeholder="my_email@gmail.com"></Input>
       <Input type="password" label="Password" required placeholder="password"></Input>
       <Input type="text" required label="Client ID" placeholder="your-client-id"></Input>

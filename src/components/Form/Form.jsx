@@ -21,10 +21,11 @@ const CloseButton = styled.button`
 `
 
 const Form = (props) => {
-  const {children} = props;
+  const {children, submit} = props;
 
   const submitForm = (event) => {
     event.preventDefault();
+    submit();
   }
   return (
     <FormStyle onSubmit={submitForm}>
