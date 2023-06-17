@@ -22,19 +22,28 @@ const HeaderStyle = styled.header`
   padding: 20px 0;
 `
 
-const Logo = styled.div`
-  background: no-repeat url(${logo});
+const LogoWrapper = styled.div`
+  width: 100px;
+  height: 100px;
+  display:flex;
+  flex-direction:column;
+  padding: 5px;
+  align-items:center;
+  justify-content: center;
   ${Frame};
-  background-position: center;
-  background-size: 30px;
-  padding: 1.5rem;
   border-radius: 50%;
+  position:relative;
+`
+const Logo = styled.img` 
+  object-fit:contain;
+  width:60%;
 `
 
 const CaptionLogo = styled.span`
-  font-size: 9px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 900;
   color: ${purple};
+  margin-top:10px;
 `
 
 const NavStyle = styled.nav`
@@ -51,28 +60,35 @@ const Wrap = styled.div`
 const PhoneStyle = styled.a`
   color: ${purple};
   margin-left: 5px;
-  font-size: 10px;
+  font-size: Clamp(15px, 2vw, 30px);
+`
+
+const PnoneIcon = styled.img`
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
 `
 
 const Header = () => {
   return (
     <HeaderStyle>
       <Container display={DisplayFlex}>
-        <Logo>
+        <LogoWrapper>
+          <Logo src={logo} alt='logo'></Logo>
         <CaptionLogo>Find bike</CaptionLogo>
-        </Logo>
-        <NavStyle>
+        </LogoWrapper>
+        {/* <NavStyle>
           <Link to="/report">Report theft</Link>
           { //if sign up
             <Link to="/officers">Officers</Link>
-          }
+          } */}
           <Wrap>
-            <img src={icon} width="20" height="20" alt="telephone icon" />
+            <PnoneIcon src={icon}  alt="telephone icon"></PnoneIcon>
             <PhoneStyle href="tel:(123)456-78-90">
               +7(123)456-78-90
             </PhoneStyle>
           </Wrap>
-        </NavStyle>
+        {/* </NavStyle> */}
         <Wrap>
           <Link to="/registration"><Button color={lightGreen}>Sign Up</Button></Link>
           <Link to="/login"><Button color={purple}>Sing in</Button></Link>

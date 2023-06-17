@@ -11,6 +11,7 @@ const FormStyle = styled.form`
   padding 1.5rem;
   flex-direction: column;
   background-color: #FFFFFF;
+  border-radius: 19px;
 `
 
 const CloseButton = styled.button`

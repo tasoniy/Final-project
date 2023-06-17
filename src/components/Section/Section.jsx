@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 
 const SectionStyle = styled.section`
-  width: 100%;
-  height: 70vh;
+  position:relative;
   background: no-repeat url(${props => props.background || "grey"});
   background-position: right top;
   background-size: contain; 

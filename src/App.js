@@ -9,7 +9,6 @@ import SignInPage from "./pages/SignIn/SignIn";
 import ReportForm from "./pages/ReportForm/ReportForm";
 import SignUp from "./pages/SignUp/SignUp";
 import OfficersList from "./pages/OfficerList/OfficersList";
-import mainImage from "./assets/main-img.png";
 import reportImage from "./assets/report.png";
 import signInImage from "./assets/auth.png";
 import signupImage from "./assets/signup.png"
@@ -22,7 +21,7 @@ function App() {
         <Main>
           <Routes>
             <Route path="/" element={
-              <Section background={mainImage}>
+              <Section>
                 <MainPage/>
               </Section>}/>
             <Route path="/login" element={

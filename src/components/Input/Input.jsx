@@ -17,7 +17,7 @@ const InputStyle = styled.input`
 
 const LabelStyle = styled.label`
   color: #2B2B37;
-  font-size: 13px;
+  font-size:25px;
   margin: 5px 0;
 `
 
